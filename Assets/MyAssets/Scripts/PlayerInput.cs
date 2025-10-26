@@ -8,6 +8,7 @@ public class PlayerInput : MonoBehaviour
     public bool down;
     public bool shoot1;
     public bool shoot2;
+    public bool interact;
 
     void Start()
     {
@@ -31,5 +32,6 @@ public class PlayerInput : MonoBehaviour
         down = Input.GetKey(KeyCode.S);
         shoot1 = Input.GetMouseButton(0);
         shoot2 = Input.GetMouseButton(1);
+        interact = Input.GetKeyDown(KeyCode.Space);
     }
 }

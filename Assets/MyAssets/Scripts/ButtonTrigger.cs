@@ -1,9 +1,9 @@
-using System.Runtime.InteropServices;
+// 버튼 트리거
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class ButtonTrigger : Trigger
 {
-    public bool IsActive
+    public override bool IsActive
     {
         get
         {

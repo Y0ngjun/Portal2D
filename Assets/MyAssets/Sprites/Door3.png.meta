@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 89ddde2bf3e40f64d8a905774e6e013d
+guid: c9880c42e8f62b94da393527d02de025
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5752739366588724016
-    second: Cube_0
+      213: 1859670036805757172
+    second: Door3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,22 +113,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cube_0
+      name: Door3_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 15
-        width: 35
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 29
+        y: 37
+        width: 7
+        height: 26
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0333dee79f5d5df40800000000000000
-      internalID: 5752739366588724016
+      spriteID: 4f8ae37ab00eec910800000000000000
+      internalID: 1859670036805757172
       vertices: []
       indices: 
       edges: []
@@ -136,7 +136,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2effc5f5fe3c9314087d6c2128951436
     internalID: 0
     vertices: []
     indices: 
@@ -144,7 +144,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cube_0: 5752739366588724016
+      Door3_0: 1859670036805757172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
