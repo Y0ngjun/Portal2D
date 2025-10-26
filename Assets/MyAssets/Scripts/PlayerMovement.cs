@@ -1,3 +1,4 @@
+// 플레이어 이동 관리
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,8 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
     public float checkRadius;
-    public float maxVelocityX;
-    public float maxVelocityY;
 
     private Rigidbody2D rigidbody2d;
     private Animator animator;
@@ -29,16 +28,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Mathf.Abs(rigidbody2d.velocity.x) > maxVelocityX)
-        {
-            rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x / Mathf.Abs(rigidbody2d.velocity.x) * maxVelocityX, rigidbody2d.velocity.y);
-        }
-        if (Mathf.Abs(rigidbody2d.velocity.y) > maxVelocityY)
-        {
-            rigidbody2d.velocity = new Vector2(rigidbody2d.velocity.x, rigidbody2d.velocity.y / Mathf.Abs(rigidbody2d.velocity.y) * maxVelocityY);
-        }
+        
     }
 
+    // 물리 업데이트
     private void FixedUpdate()
     {
         if (gameManager == null || gameManager.isGameOver || playerInput == null)
@@ -50,12 +43,14 @@ public class PlayerMovement : MonoBehaviour
         Movement();
     }
 
+    // 땅에 닿았는지 판별
     private void IsGrounded()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
         animator.SetBool("Ground", isGrounded);
     }
 
+    // 이동 및 점프
     private void Movement()
     {
         rigidbody2d.velocity = new Vector2(playerInput.move * moveSpeed, rigidbody2d.velocity.y);

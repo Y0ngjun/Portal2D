@@ -1,3 +1,4 @@
+// 마우스 커서 스프라이트 표시 및 플레이어 - 커서 점선 표시
 using UnityEngine;
 
 public class Aim : MonoBehaviour
@@ -14,6 +15,7 @@ public class Aim : MonoBehaviour
 
     void Update()
     {
+        // 마우스 커서 스프라이트 표시
         Vector3 mouseScreenPos = Input.mousePosition;
         bool isInsideScreen = mouseScreenPos.x >= 0 && mouseScreenPos.x <= Screen.width &&
                               mouseScreenPos.y >= 0 && mouseScreenPos.y <= Screen.height;
@@ -31,7 +33,8 @@ public class Aim : MonoBehaviour
             Cursor.visible = true;
         }
 
-        if(playerTransform == null)
+        // 플레이어 - 커서 점선 표시
+        if (playerTransform == null)
         {
             lineRenderer.enabled = false;
             return;

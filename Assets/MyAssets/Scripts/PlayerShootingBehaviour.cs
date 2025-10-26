@@ -1,3 +1,4 @@
+// 플레이어의 슈팅 애니메이션 실행 여부
 using UnityEngine;
 
 public class PlayerShootingBehaviour : StateMachineBehaviour

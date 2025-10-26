@@ -1,12 +1,13 @@
+// 입력 관리
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
-    public GameManager gameManager;
     public float move;
     public bool jump;
     public bool down;
     public bool shoot1;
+    public bool shoot2;
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class PlayerInput : MonoBehaviour
 
     void Update()
     {
-        if (gameManager == null || gameManager.isGameOver)
+        if (GameManager.Instance == null || GameManager.Instance.isGameOver)
         {
             move = 0;
             jump = false;
@@ -29,5 +30,6 @@ public class PlayerInput : MonoBehaviour
         jump = Input.GetKey(KeyCode.W);
         down = Input.GetKey(KeyCode.S);
         shoot1 = Input.GetMouseButton(0);
+        shoot2 = Input.GetMouseButton(1);
     }
 }

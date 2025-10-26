@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+// 포탈 위치 프리셋 (임시)
 using UnityEngine;
 
 public class TempPortalController : MonoBehaviour
