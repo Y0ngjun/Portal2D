@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -11,7 +12,9 @@ public class LevelManager : MonoBehaviour
     [TextArea(2, 5)]
     public List<string> comment;
     public List<Vector3> pos;
+    public TextMeshProUGUI timerText;
     public int maxStep;
+    public string nextSceneName;
 
     private int step;
 
@@ -32,6 +35,7 @@ public class LevelManager : MonoBehaviour
         step = 0;
         UpdateInstruction();
         UpdatePos();
+        GameManager.Instance.RegisterTimerText(timerText);
     }
 
     public void NextStep()
@@ -40,8 +44,10 @@ public class LevelManager : MonoBehaviour
 
         if (step == maxStep)
         {
-            // go to next level
-            Debug.Log("Clear!");
+            if (nextSceneName != null)
+            {
+                GameManager.Instance.LoadSceneByName(nextSceneName);
+            }
             return;
         }
 
@@ -63,5 +69,15 @@ public class LevelManager : MonoBehaviour
         {
             checkPoint.transform.position = pos[step];
         }
+    }
+
+    public void StartTimer()
+    {
+        GameManager.Instance.StartTimer();
+    }
+
+    public void QuitGame()
+    {
+        GameManager.Instance.QuitGame();
     }
 }

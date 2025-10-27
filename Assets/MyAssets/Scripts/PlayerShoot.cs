@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public GameManager gameManager;
     public PlayerInput playerInput;
     public GameObject bulletPrefab1;
     public GameObject bulletPrefab2;

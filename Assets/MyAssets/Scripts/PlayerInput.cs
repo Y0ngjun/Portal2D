@@ -9,6 +9,10 @@ public class PlayerInput : MonoBehaviour
     public bool shoot1;
     public bool shoot2;
     public bool interact;
+    public bool cameraUp;
+    public bool cameraDown;
+    //public bool cameraRight;
+    //public bool cameraLeft;
 
     void Start()
     {
@@ -33,5 +37,9 @@ public class PlayerInput : MonoBehaviour
         shoot1 = Input.GetMouseButton(0);
         shoot2 = Input.GetMouseButton(1);
         interact = Input.GetKeyDown(KeyCode.Space);
+        cameraUp = Input.GetKey(KeyCode.Q);
+        cameraDown = Input.GetKey(KeyCode.E);
+        //cameraRight = Input.GetKey(KeyCode.RightArrow);
+        //cameraLeft = Input.GetKey(KeyCode.LeftArrow);
     }
 }

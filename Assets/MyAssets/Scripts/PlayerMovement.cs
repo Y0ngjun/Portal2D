@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameManager gameManager;
     public PlayerInput playerInput;
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -34,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     // 물리 업데이트
     private void FixedUpdate()
     {
-        if (gameManager == null || gameManager.isGameOver || playerInput == null)
+        if (GameManager.Instance == null || GameManager.Instance.isGameOver || playerInput == null)
         {
             return;
         }

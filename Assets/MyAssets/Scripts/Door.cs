@@ -36,7 +36,6 @@ public class Door : MonoBehaviour
 
     public void SetCollider()
     {
-        Debug.Log(open);
         if (open)
         {
             boxCollider2d.enabled = false;
